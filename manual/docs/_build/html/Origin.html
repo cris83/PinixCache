@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Origin &mdash; PINIX Cache Docs 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PINIX Cache Docs 1.0 documentation" href="index.html"/>
+        <link rel="next" title="VHost" href="VHost.html"/>
+        <link rel="prev" title="Global" href="Global.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="index.html" class="icon icon-home"> PINIX Cache Docs
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Global.html">Global</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#global-process">1. Global Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Global.html#pinix-process-user">1.1 PINIX Process User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Global.html#worker-process-count">1.2 Worker Process Count</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Global.html#access-log-file-path">1.3 Access log File Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Global.html#log-format">1.4 Log format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#proxy">2. Proxy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Global.html#temporary-cache-path">2.1 Temporary Cache Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Global.html#cache-path-list-config">2.2 Cache Path List &amp; Config</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#server-access-control">3. Server Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#cluster">4. Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#vhost-list">5. VHost List</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Origin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#name">1. Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#schedule">2. Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server">3. Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VHost.html">VHost</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#name">1. Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#uri-terms">2. URI_TERMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#upper-case">3. Upper Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#lower-case">4. Lower Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#location-mode">5. Location Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#normal-mode">5.1 Normal Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#streaming">5.1.1 Streaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#ttl">5.1.2. TTL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#vary">5.1.3. Vary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#rewrite-type">5.1.4. Rewrite Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#cache-mode">5.2 Cache Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#cache">5.2.1. Cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#id1">5.2.2 Streaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#id2">5.2.3. TTL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#id3">5.2.4. Vary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#id4">5.1.3 Vary와 동일</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#freshness-check">5.2.5. Freshness Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#intercept-errors">5.2.6. Intercept Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#bypass">5.2.7. Bypass</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#set-header">5.2.8. Set Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#ignore-headers">5.2.9. Ignore Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#add-headers">5.2.10. Add Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#pass-headers">5.2.11. Pass Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#next-upstream">5.2.12. Next Upstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#connect-timeout">5.2.13. Connect Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#send-timeout">5.2.14. Send Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#read-timeout">5.2.15. Read Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost.html#proxy-pass">5.2.16. Proxy Pass</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VHost-Proxy.html">Virtual Host Proxy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#id1">1. 가상호스트 목록</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#process">2. Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#id2">2.1 가상호스트</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#service-port">2.2 Service Port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#record-404-error-log">2.3 Record 404 error log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#default-type">2.4 Default Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#error-log-file-path">2.5 Error Log File Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#common-log-file-path">2.6 Common Log File Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#access-log-format-type">2.7 Access log format type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#https">3. HTTPS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#https-mode">3.1 HTTPS Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#port">3.2 Port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#protocols">3.3 Protocols</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#certificate">3.4 Certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#certificate-key">3.5 Certificate Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#session-timeout">3.6 Session Timeout</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#client">4. Client</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#etag">4.1 ETAG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#falsification-check">4.2 Falsification Check</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#client-response-header">4.3 Client Response Header</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#client-body-timeout">4.4 Client Body Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#client-header-timeout">4.5 Client Header Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#send-timeout">4.6 Send Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#keepalive-timeout">4.7 Keepalive Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#keepalive-requests">4.8 Keepalive Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#proxy">5. Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#secure-url">6. Secure URL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#id3">6.1 Secure URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#secure-algorithm-type">6.2 Secure Algorithm Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#secure-url-character-case">6.3 Secure URL Character Case</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#callback-domain">6.4 Callback Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#callback-file-path">6.5 Callback File Path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#url-forwarding-results">6.6 URL forwarding results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#secure-url-key">6.7 Secure URL Key</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#secure-url-value">6.8 Secure URL Value</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#server-access-control">7. Server Access Control</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#id4">7.1 Server Access Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#bandwidth">7.2 Bandwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#bandwidth-after">7.3 Bandwidth After</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#resolver">7.4 Resolver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#resolver-timeout">7.5 Resolver Timeout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#cache-regex-purge">7.6 Cache Regex Purge</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#compression">8. Compression</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#gzip">8.1 GZip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#gzip-static">8.2 Gzip Static</a></li>
+<li class="toctree-l3"><a class="reference internal" href="VHost-Proxy.html#gzip-disable">8.3 Gzip Disable</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#mime-types">9. Mime Types</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PINIX Cache Docs</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Origin</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Origin.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="origin">
+<h1>Origin<a class="headerlink" href="#origin" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="name">
+<h2>1. Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h2>
+<p>원본서버 이름을 설정한다. 이 이름은 가상호스트의 프록시설정에 그대로
+반영할 수 있다.</p>
+<div class="highlight-python"><div class="highlight"><pre>- Keyword : name
+- Type    : json string
+- Location: origin
+</pre></div>
+</div>
+<p>* Syntax</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;name&quot;</span> <span class="p">:</span> <span class="s">&quot;default_origin&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="schedule">
+<h2>2. Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h2>
+<p>다수의 원본서버에 요청할 때 다양한 스케줄링을 설정할 수 있다. 서버로
+보내는 모든 요청은 라운드로빈(round-robin) 방식으로 백엔드 서버에 전달
+한다.</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>rr</dt>
+<dd><p class="first last">기본값이며, 등록된 서버를 라운드 로빈 형태로 서비스.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>fair</dt>
+<dd><p class="first last">단순한 가중 최소 접속 라운드로빈으로 활성화된 접속자 수가 가장적은 서버를 RR방식으로 선택하여 요청.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>fair no_rr (no roun-robin)</dt>
+<dd><p class="first last">라운드로빈 방식을 사용을 하지않고, 부하 양에 따라 다수의 백엔드를 배정하는 경우에 적용.이 방식은 필요한 만큼의 백엔드를 사용할 수 있도록보장(권장설정 값)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>fair weight_mode=idle no_rr</dt>
+<dd><p class="first last">최소한의 백엔드 서버 풀 안에서 부하분산을 수행.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>fair weight_mode=peak</dt>
+<dd><p class="first last">백엔드 서버가 더이상의 요청을 처리를 못한 busy 상태일 경우 클라이언트에 502 에러로 응답.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>- Keyword : schedule
+- Type    : json string
+- Location: origin
+</pre></div>
+</div>
+<p>* Syntax</p>
+<div class="highlight-python"><div class="highlight"><pre>{
+    &quot;schedule&quot; : &quot;rr&quot;    //&lt;- fair | fair no_rr | fair weight_mode=idle no_rr | fair weight_mode=peak
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="server">
+<h2>3. Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h2>
+<p>실제 서비스에 반영할 원본서버 주소를 설정한다. 원본서버 설정 시 장애에
+적절한 대응을 위한 다양한 정책을 지정할 수 있다.</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>weight=number</dt>
+<dd><p class="first last">백엔드 서버에 대한 가중치 설정기본 설정값 = 1</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>max_fails=number</dt>
+<dd><p class="first last">요청실패회수에 대해서 임계치를 지정을 하고, 해당회수에 도달하면 작동하지 않는 서버로 간주기본 설정값 = 1</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>max_timeout=number</dt>
+<dd><p class="first last">설정한 시간동안 요청이 성공을 하지 못할 경우작동하지 않는 서버로 간주기본 설정값 = 10s</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>backup</dt>
+<dd><p class="first last">primary서버가 사용불가시 backup서버에서 요청을 수행. ```</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>-  Keyword : server
+-  Type : json array
+-  Location: origin
+</pre></div>
+</div>
+<p>/* Syntax</p>
+<div class="highlight-python"><div class="highlight"><pre>{ &quot;server&quot; :
+    [
+        // Array - 0
+        { &quot;host&quot; : &quot;210.181.96.63&quot; },
+        // Array -1
+        {
+            &quot;host&quot; : &quot;210.181.96.26&quot;,
+            &quot;policy&quot; :
+                {
+                    &quot;weight&quot; : &quot;5&quot;,
+                    &quot;max\_fails&quot; : &quot;3&quot;,
+                    &quot;fail\_timeout&quot; : &quot;5s&quot;,
+                    &quot;sub\_policy&quot; : &quot;none&quot; //&lt;- &quot;none \| backup \| down&quot;
+                }
+        }
+    ]
+}
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="VHost.html" class="btn btn-neutral float-right" title="VHost" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Global.html" class="btn btn-neutral" title="Global" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright © NFLabs. All rights reserved..
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pinix Cache Online Manual</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PINIX Cache Docs  documentation" href="#"/>
+        <link rel="next" title="Global" href="Global.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side" style="overflow: hidden;">
+      <div class="wy-side-scroll" >
+        <div class="wy-side-nav-search" style="background-color: #333333;">
+          
+
+            <img src="../images/logo.png" style="background-color: #333333; width: 80px; height: 40px; border-radius: 0% !important; margin-bottom: 5px;" />
+			<span><strong><a href="index.html" style="color: white;">Online Manual</a></strong></span>
+			<span><br /></span>
+			<span style="margin-top: 3px; margin-bottom: 5px;">&nbsp;</span>
+            <!--<a href="#" class="icon icon-home"> PINIX Cache Docs-->
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="Global.html">Global</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Origin.html">Origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VHost.html">VHost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VHost-Proxy.html">Virtual Host Proxy</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="#">PINIX Cache Docs</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="#">Docs</a> &raquo;</li>
+      
+    <li>Welcome to the PINIX Cache Docs!</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-the-pinix-cache-docs">
+<h1>Welcome to the PINIX Cache Docs!<a class="headerlink" href="#welcome-to-the-pinix-cache-docs" title="Permalink to this headline">¶</a></h1>
+<p>이 문서는 PINIX 환경설정에 관한 내용 입니다.
+( This documents specify the PINIX Configurations. )</p>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>PINIX는 운영자의 편의와 정확성을 위해 기본적으로 웹 환경설정을 지원하고 있습니다.
+웹을 통해서 생성된 설정정보는 서버의 특정 위치에 JSON 파일로 생성됩니다.
+이 문서에서는 JSON 파일의 구성 및 각 항목별 내용에 대해 상세 기술되어 있습니다.</p>
+</div>
+<div class="section" id="etc">
+<h2>Etc<a class="headerlink" href="#etc" title="Permalink to this headline">¶</a></h2>
+<p>/* Configuration file measurement units</p>
+<div class="highlight-python"><div class="highlight"><pre>ms milliseconds
+s seconds
+m    minutes
+h   hours
+d  days
+w weeks
+M    months, 30 days
+y   years, 365 days
+</pre></div>
+</div>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Global.html">Global</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#global-process">1. Global Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#proxy">2. Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#server-access-control">3. Server Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Global.html#cluster">4. Cluster</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Origin.html">Origin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Origin.html#name">1. Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Origin.html#schedule">2. Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Origin.html#server">3. Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VHost.html">VHost</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#name">1. Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#uri-terms">2. URI_TERMS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#upper-case">3. Upper Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#lower-case">4. Lower Case</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost.html#location-mode">5. Location Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="VHost-Proxy.html">Virtual Host Proxy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#id1">1. 가상호스트 목록</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#process">2. Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#https">3. HTTPS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#client">4. Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#proxy">5. Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#secure-url">6. Secure URL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#server-access-control">7. Server Access Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#compression">8. Compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VHost-Proxy.html#mime-types">9. Mime Types</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Global.html" class="btn btn-neutral float-right" title="Global" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright © NFLabs. All rights reserved..
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

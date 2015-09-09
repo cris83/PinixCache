@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; PINIX Cache Docs 1.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PINIX Cache Docs 1.0 documentation" href="../../../../index.html"/> 
+
+  
+  <script src="../../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> PINIX Cache Docs
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Global.html">Global</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../Origin.html">Origin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../VHost.html">VHost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../VHost-Proxy.html">Virtual Host Proxy</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../../index.html">PINIX Cache Docs</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+      
+    <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../../_sources/_themes/sphinx_rtd_theme-master/bower_components/bourbon/readme.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>[![Bourbon Sass Mixin Library](<a class="reference external" href="http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io">http://bourbon.io/images/shared/bourbon-logo.png)](http://bourbon.io</a>)
+&lt;br&gt;
+&lt;br&gt;
+[![Gem Version](<a class="reference external" href="https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon">https://badge.fury.io/rb/bourbon.png)](http://badge.fury.io/rb/bourbon</a>) [![Code Climate](<a class="reference external" href="https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon">https://codeclimate.com/github/thoughtbot/bourbon.png)](https://codeclimate.com/github/thoughtbot/bourbon</a>)  [![Gitter chat](<a class="reference external" href="https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon">https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon</a>)</p>
+<ul class="simple">
+<li></li>
+</ul>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">warning:</th><td class="field-body">Bourbon <strong>4.0.0</strong> requires Sass <strong>3.3.x</strong>. If you are using <strong>libsass</strong> or <strong>sass-rails</strong> use Bourbon <strong>3.2.x</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>## A lightweight mixin library for Sass
+Bourbon is a library of pure sass mixins that are designed to be simple
+and easy to use. No configuration required.</p>
+<p>The mixins aim to be as vanilla as possible, meaning they should be as close to the original CSS syntax as possible.</p>
+<p>The mixins contain vendor specific prefixes for all CSS3 properties for support
+amongst modern browsers. The prefixes also ensure graceful degradation for older
+browsers that support only CSS3 prefixed properties. Bourbon uses SCSS syntax.</p>
+<p>### [Documentation &amp; Demo](<a class="reference external" href="http://bourbon.io">http://bourbon.io</a>)</p>
+<p>### Requirements
+Sass 3.3+</p>
+<p>### Install for Rails 3.1+
+In your Gemfile:</p>
+<blockquote>
+<div>gem &#8216;bourbon&#8217;</div></blockquote>
+<p>Then run:</p>
+<blockquote>
+<div>$ bundle install</div></blockquote>
+<p>Restart your server. Then rename application`.css` to application`.css.scss`:</p>
+<blockquote>
+<div>mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.scss</div></blockquote>
+<p>Delete the sprocket directive in application.css.scss: [Why?](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets">https://github.com/thoughtbot/bourbon/wiki/Rails-Sprockets</a>)</p>
+<blockquote>
+<div><a href="#id1"><span class="problematic" id="id2">*</span></a>= require_tree .</div></blockquote>
+<p>Import Bourbon at the beginning of application.css.scss. All additional stylesheets must be imported below Bourbon:</p>
+<blockquote>
+<div>&#64;import &#8220;bourbon&#8221;;
+&#64;import &#8220;home&#8221;;
+&#64;import &#8220;users&#8221;;</div></blockquote>
+<p>[Help! I&#8217;m getting an undefined mixin error.](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin">https://github.com/thoughtbot/bourbon/wiki/Rails-Help-%5C-Undefined-mixin</a>)</p>
+<p>##### [Rails 3.0.x Install Instructions](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install">https://github.com/thoughtbot/bourbon/wiki/Rails-3.0.x-Install</a>) | [Rails 2.3 Install Instructions](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install">https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install</a>)</p>
+<p>### Non-Rails projects
+Bourbon includes an easy way to generate a directory with all the necessary files.
+For command line help: <cite>$ bourbon help</cite> or visit the [Command line tools wiki](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools">https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools</a>)</p>
+<p>##### Install (Bourbon v3.0+)</p>
+<blockquote>
+<div>gem install bourbon</div></blockquote>
+<p>Install Bourbon into the current directory by generating the <cite>bourbon</cite> folder:</p>
+<blockquote>
+<div>bourbon install</div></blockquote>
+<p>The generated folder will contain all the mixins and other necessary Bourbon files. It is recommended not to add or modify the Bourbon files so that you can update Bourbon easily.</p>
+<p>You can specify a target directory using the <cite>path</cite> flag:</p>
+<blockquote>
+<div>bourbon install &#8211;path my/custom/path/</div></blockquote>
+<p>##### Import</p>
+<p>Lastly, import the mixins at the beginning of your stylesheet(s):</p>
+<blockquote>
+<div>&#64;import &#8216;bourbon/bourbon&#8217;;</div></blockquote>
+<p>Note: Bourbon no longer requires a custom <cite>sass &#8211;watch</cite> command for Bourbon v3.0+</p>
+<p>##### Other Commands
+Visit the [Command line tools wiki](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools">https://github.com/thoughtbot/bourbon/wiki/Command-Line-Tools</a>) for a complete list</p>
+<blockquote>
+<div>bourbon help
+bourbon update</div></blockquote>
+<p>##### [Bourbon v2.x install instructions](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install">https://github.com/thoughtbot/bourbon/wiki/Bourbon-v2.x-or-Rails-2.3-Install</a>)</p>
+<ul class="simple">
+<li>[Changelog](<a class="reference external" href="https://github.com/thoughtbot/bourbon/releases">https://github.com/thoughtbot/bourbon/releases</a>)</li>
+<li>[Browser support](<a class="reference external" href="https://github.com/thoughtbot/bourbon/wiki/Browser-Support">https://github.com/thoughtbot/bourbon/wiki/Browser-Support</a>)</li>
+</ul>
+<p>### Chat with us
+[![Gitter chat](<a class="reference external" href="https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon">https://badges.gitter.im/thoughtbot/bourbon.png)](https://gitter.im/thoughtbot/bourbon</a>)</p>
+<p>### Credits
+![thoughtbot](<a class="reference external" href="http://thoughtbot.com/images/tm/logo.png">http://thoughtbot.com/images/tm/logo.png</a>)</p>
+<p>Bourbon is maintained and funded by [thoughtbot, inc](<a class="reference external" href="http://thoughtbot.com/community">http://thoughtbot.com/community</a>)</p>
+<p>The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
+<p>Got questions? Need help? Tweet at [&#64;phillapier](<a class="reference external" href="http://twitter.com/phillapier">http://twitter.com/phillapier</a>).</p>
+<p>### License
+Bourbon is Copyright © 2011-2013 thoughtbot. It is free software, and may be redistributed under the terms specified in the LICENSE file.</p>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright © NFLabs. All rights reserved..
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

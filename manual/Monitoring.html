@@ -30,7 +30,9 @@
   
 
   
-    <link rel="top" title="PINIX Cache Docs  documentation" href="index.html"/> 
+    <link rel="top" title="PINIX Cache Docs  documentation" href="index.html"/>
+        <link rel="next" title="Origin" href="Origin.html"/>
+        <link rel="prev" title="Global" href="Global.html"/> 
 
   
   <script src="static/js/modernizr.min.js"></script>
@@ -60,7 +62,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -74,9 +76,13 @@
           
             
             
-                <ul>
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Global.html">Global</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dashboard">1. Dashboard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#details">2. Details</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Origin.html">Origin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VHost.html">VHost</a></li>
 <li class="toctree-l1"><a class="reference internal" href="VHost-Proxy.html">Virtual Host Proxy</a></li>
@@ -110,8 +116,12 @@
   <ul class="wy-breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li></li>
+    <li>Monitoring</li>
       <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Monitoring.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
@@ -120,23 +130,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="monitoring">
+<h1>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dashboard">
+<h2>1. Dashboard<a class="headerlink" href="#dashboard" title="Permalink to this headline">¶</a></h2>
+<a class="reference external image-reference" href="../images/manual/dashboard.png"><img alt="../images/manual/dashboard.png" class="align-center" src="../images/manual/dashboard.png" /></a>
+<p>피닉스 모니터링은 피닉스 캐시 서버에 대하여 요청에 대한 모든 현황을 파악할 수 있도록 리스팅 되어 제공됩니다.
+시간대별로 1일, 한달, 1년의 데이터를 살펴볼 수 있습니다.</p>
+<p>상단의 청색으로 강조 표시되어 있는 도메인은 요청이 들어온 도메인 중, 가상 호스트 도메인 정보에 등록이 되어있는 정규 등록 도메인입니다.
+그 외의 강조 표시가 되어있지 않은 도메인은 가상 호스트 도메인 정보에 등록되어있지 않은 비정규 요청 도메인입니다.</p>
+<p>요청이 들어온 데이터는 HIT, MISS, 1XX, 2XX, 3XX, 4XX, 5XX 및 SENT bps(Bit per second), RECV bps로 정보 제공됩니다.
+해당 데이터는 기간별 누적 데이터임에 주의해주십시오.</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>HIT, MISS</dt>
+<dd><p class="first last">컨텐츠 요청에 대한 캐시 응답 결과 정보입니다.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>1XX, 2XX, 3XX, 4XX, 5XX</dt>
+<dd><p class="first last">컨텐츠 요청에 대한 응답 HTTP 상태코드 카운트 수치입니다.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>SENT bps, RECV bps</dt>
+<dd><p class="first last">전송 및 수신에 대한 bps(bit per second)에 대한 수치입니다.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="details">
+<h2>2. Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+<a class="reference external image-reference" href="../images/manual/domaingraph_details.png"><img alt="../images/manual/domaingraph_details.png" class="align-center" src="../images/manual/domaingraph_details.png" /></a>
+<p>도메인의 상세정보 열람이 가능합니다.
+해당 정보는 대시보드 정보에서 선택된 도메인에 대하여 상세 히스토리 정보를 제공합니다.</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Origin.html" class="btn btn-neutral float-right" title="Origin" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Global.html" class="btn btn-neutral" title="Global" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -174,7 +222,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
   
 
@@ -190,14 +237,7 @@
           SphinxRtdTheme.StickyNav.enable();
       });
   </script>
-  
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
    
-
 
 </body>
 </html>

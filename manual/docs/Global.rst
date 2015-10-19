@@ -109,6 +109,11 @@ PINIX의 로그경로 및 파일이름을 지정한다.
 Group을 추가/수정하여 세부적으로 로그를 남길 항목들을 설정 할 수 있으며,
 지정한 로그 항목들의 노출 순서를 지정할 수 있다.
 
+.. image:: ../images/manual/using_logformat.gif
+   :target: ../images/manual/using_logformat.gif
+   :align: center
+
+
 ::
 
     - Keyword : log_format
